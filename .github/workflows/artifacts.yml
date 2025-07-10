@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v4.6.2
         with:
           name: ${{secrets.WEB_APP_SECRET}}
-          path: ${{secrets.WEB_APP_SECRET}}.exe
+          path: ./${{secrets.WEB_APP_SECRET}}.exe
 
 
           
