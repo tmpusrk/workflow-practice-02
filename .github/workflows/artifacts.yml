@@ -24,10 +24,13 @@ jobs:
     runs-on: windows-latest
     needs: [build]
     steps:
+      - name: List Artifacts
+        run: ls
+        
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.6.2
         with:
-          name: ${{secrets.WEB_APP_SECRET}}
+          name: windows
           path: ./${{secrets.WEB_APP_SECRET}}.exe
 
 
