@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 
 app.get("/", (req, res) => {
-  res.json({ message: "Executable is working" }).status(200);
+  res.json({ message: "📦 Executable is working!" }).status(200);
 });
 
 app.listen(4000, () => {
