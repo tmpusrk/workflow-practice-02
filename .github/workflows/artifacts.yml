@@ -24,6 +24,7 @@ jobs:
         uses: actions/upload-artifact@v4.6.2
         with:
           name: windows-build
+          path: .dist/${{ secrets.WEB_APP_SECRET }}.exe
   upload:
     name: Upload Artifact
     runs-on: windows-latest
@@ -33,6 +34,7 @@ jobs:
         uses: actions/download-artifact@v4.3.0
         with: 
           name: windows-build
+          path: .dist/${{ secrets.WEB_APP_SECRET }}.exe
   
       - name: List Artifacts
         run: pwd && ls
@@ -41,4 +43,4 @@ jobs:
         uses: actions/upload-artifact@v4.6.2
         with:
           name: windows
-          path: ./${{secrets.WEB_APP_SECRET}}.exe
+          path: .dist/${{secrets.WEB_APP_SECRET}}.exe
